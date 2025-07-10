@@ -1,21 +1,120 @@
 body {
   margin: 0;
-  font-family: sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000000;
 }
 
 .navbar {
-  background-color: #111;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 100;
 }
 
-.navbar-content {
+.navbar.scrolled {
+  background-color: rgb(2, 2, 2);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.06);
+}
+
+.navbar-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.navbar-logo span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+
+
+/* Navbar Links (desktop + mobile) */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #ffffff;
+  width: 0%;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after,
+.navbar-links li a.active::after {
+  width: 100%;
+}
+
+.navbar-links li a.active {
+  color: #ffffff;
+}
+
+/* Mobile toggle */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.navbar-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 .logo {
@@ -23,23 +122,56 @@ body {
   width: 40px;
   object-fit: contain;
 }
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
 
-.gallery {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
 }
 
-.gallery img {
+.overlay-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  background-image: url('/images/photo30.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(30%);
+  z-index: 0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 50vh;
+}
+.cta-button {
+  padding: 12px 24px;
+  background-color: rgb(221, 221, 221);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.gallery-section h2{
+  color: white;
+
+}
+
+.cta-button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }
 
 .footer {
-  background-color: #111;
+  background-color: #000000;
   color: white;
   padding: 1rem;
   text-align: center;

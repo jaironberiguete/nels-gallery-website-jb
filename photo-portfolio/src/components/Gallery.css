@@ -1,0 +1,49 @@
+.gallery-section {
+  background: #000;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  padding: 40px 0;
+  margin-bottom: 30px;
+}
+
+.masonry-grid {
+  display: flex;
+  margin: 0 auto; /* centers the gallery */
+  width: 100%;
+  max-width: 1000px; /* adjust this to make the gallery narrower */
+  padding: 0 10px;
+}
+
+.masonry-column {
+  padding-left: 20px;
+  background-clip: padding-box;
+}
+
+.gallery-item {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
