@@ -1,4 +1,6 @@
-import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaWhatsapp, FaLocationArrow} from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { RxDividerVertical } from "react-icons/rx";
 import './About.css';
 function About() {
   return (
@@ -25,6 +27,13 @@ function About() {
         <a href="https://wa.me/18096739388" target="_blank" rel="noreferrer">
           <FaWhatsapp />
         </a>
+        <a href="" target="_blank" rel="noreferrer">
+          <RxDividerVertical/>
+        </a>
+        <a href="" target="_blank" rel="noreferrer">
+          <FaLocationDot/>
+        </a>
+        <h1>Barahona, RD.</h1>
       </div>
     </div>
   </div>

@@ -70,6 +70,13 @@
   color: #ff6ec4; /* Accent color */
 }
 
+.social-links h1{
+  font-size: 12px;
+  margin: 0%;
+  padding-top: 6px;
+  
+}
+
 @media (max-width: 500px) {
  .about-container {
   display: flex;
