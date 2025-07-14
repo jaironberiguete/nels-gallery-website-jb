@@ -1,5 +1,5 @@
 import './Services.css';
-import { FaCameraRetro, FaUserAlt, FaHeart, FaCalendarAlt, FaBoxOpen } from "react-icons/fa";
+import { FaCameraRetro, FaUserAlt, FaHeart, FaCalendarAlt, FaVideo } from "react-icons/fa";
 
 function Services(){
   return(
@@ -20,6 +20,11 @@ function Services(){
       <FaCalendarAlt size={40} color="#fff" className="service-icon" />
       <h3>Eventos</h3>
       <p>Documentamos tus eventos con estilo y emoción.</p>
+    </div>
+    <div className="service-card">
+      <FaVideo size={40} color="#fff" className="service-icon" />
+      <h3>Videos</h3>
+      <p>Videos de alta calidad con los mejores equipos y profesionales de la zona.</p>
     </div>
   </div>
 </section>
