@@ -4,6 +4,18 @@ body {
   background-color: #000000;
 }
 
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40vh; /* or set your own height */
+  padding: 0 20px;
+}
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -124,7 +136,7 @@ body {
 }
 .hero {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
   font-family: 'Playfair Display', serif;
 
