@@ -24,7 +24,7 @@ console.log("Form ref:", form.current);
           alert("Message sent successfully!");
           console.log(result.text);
           form.current.reset();
-          
+
         },
         (error) => {
           alert("Failed to send message.");
@@ -43,7 +43,7 @@ console.log("Form ref:", form.current);
         </label>
         <label>
           Correo Electronico
-          <input type="email" name="user_email" placeholder="tu@correo.com" required />
+          <input type="email" name="user_email" placeholder="ejemplo@correo.com" required />
         </label>
         <label>
           Mensaje
