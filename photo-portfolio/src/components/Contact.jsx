@@ -2,7 +2,7 @@ import './Contact.css';
 
 function Contact() {
   return (
-    <section id="contact" className="contact-section">
+    <section id="CONTACTO" className="contact-section">
       <h2>CONTACTANOS</h2>
       <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
         <label>

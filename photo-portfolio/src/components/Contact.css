@@ -3,6 +3,7 @@
   color: white;
   padding: 60px 20px;
   text-align: center;
+  margin-top: 50px;
 }
 
 .contact-section h2 {
@@ -13,12 +14,15 @@
 
 .contact-form {
   font-family: 'Playfair Display', serif;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0 20px;
+  padding: 20px;
+  border: 2px solid #333; /* ← This is your full grid border */
+  border-radius: 12px;     /* optional for rounded edges */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* optional depth */
 }
 
 .contact-form label {
@@ -59,4 +63,10 @@
 
 .contact-form button:hover {
   background-color: #e5e5e5;
+}
+
+@media (max-width: 500px) {
+  .contact-section h2{
+    margin-top: 60px;
+  }
 }

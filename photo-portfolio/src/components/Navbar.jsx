@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './Navbar.css';
 // import './Navbar.css';
 
 function Navbar() {
@@ -38,7 +39,7 @@ function Navbar() {
       </div>
 
       <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
-        {['incio', 'Galeria', 'Contacto', 'Acerca de'].map((item) => (
+        {['INICIO', 'SERVICIOS', 'GALERIA', 'CONTACTO', 'ACERCA DE'].map((item) => (
           <li key={item}>
             <a
               href={`#${item}`}

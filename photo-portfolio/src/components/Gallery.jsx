@@ -20,13 +20,13 @@ import './Gallery.css';
   
 const breakpointColumnsObj = {
   default: 4,
-  1100: 2,
-  700: 1
+  1100: 4,
+  700: 3,
 };
 
 function Gallery() {
   return (
-    <section id="gallery" className="gallery-section">
+    <section id="GALERIA" className="gallery-section">
       <h2>GALERIA</h2>
 
       <PhotoProvider>

@@ -1,0 +1,82 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 100;
+}
+
+.navbar.scrolled {
+  background-color: rgb(2, 2, 2);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.06);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.navbar-logo span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #ffffff;
+  width: 0%;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after,
+.navbar-links li a.active::after {
+  width: 100%;
+}
+
+.navbar-links li a.active {
+  color: #ffffff;
+}
+
+/* Mobile toggle */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.navbar-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s ease;
+}
