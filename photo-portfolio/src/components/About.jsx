@@ -14,7 +14,7 @@ function About() {
       <p>
         "Somos una empresa de fotografía profesional dedicada a capturar momentos
         que duran para siempre. Ya sea una boda, un evento, o una sesión personal,
-        nuestro enfoque es siempre contar una historia con cada imagen."
+        nuestro enfoque es siempre contar una historia en cada imagen y videos."
       </p>
       
       <div className="social-links">

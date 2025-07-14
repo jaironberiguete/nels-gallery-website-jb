@@ -17,7 +17,15 @@ function Contact() {
         (result) => {
           alert("Message enviado con exito!");
           console.log(result.text);
+          
+          emailjs.sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_AR_EMAILJS_TEMPLATE_ID,
+          form.current,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          )
           form.current.reset();
+          
 
         },
         (error) => {
@@ -40,6 +48,10 @@ function Contact() {
           <input type="email" name="user_email" placeholder="ejemplo@correo.com" required />
         </label>
         <label>
+        <label>
+          Numero Telefonico:
+          <input  type="number" name="phone_number" placeholder="000-000-0000" required />
+        </label>
           Mensaje:
           <textarea  name="message" rows="5" placeholder="Escribe un mensaje..." required />
         </label>
