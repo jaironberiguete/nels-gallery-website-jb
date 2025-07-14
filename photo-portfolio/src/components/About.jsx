@@ -16,13 +16,13 @@ function About() {
       </p>
       
       <div className="social-links">
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/nelsgalleryrd" target="_blank" rel="noreferrer">
           <FaInstagram />
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+        <a href="https://www.facebook.com/share/16iJbRQfu1/?mibextid=wwXIfr" target="_blank" rel="noreferrer">
           <FaFacebookF />
         </a>
-        <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer">
+        <a href="https://wa.me/18096739388" target="_blank" rel="noreferrer">
           <FaWhatsapp />
         </a>
       </div>
