@@ -85,8 +85,8 @@
 
 @media (max-width: 500px) {
   .gallery-item img {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 110px;
+    max-width: 110px;
   }
   .masonry-grid {
   width: 92%;

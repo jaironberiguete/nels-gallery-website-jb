@@ -7,12 +7,6 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log("Sending email with:");
-console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-console.log("Form ref:", form.current);
-
     emailjs.sendForm(
          import.meta.env.VITE_EMAILJS_SERVICE_ID,
          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -21,13 +15,13 @@ console.log("Form ref:", form.current);
       )
       .then(
         (result) => {
-          alert("Message sent successfully!");
+          alert("Message enviado con exito!");
           console.log(result.text);
           form.current.reset();
 
         },
         (error) => {
-          alert("Failed to send message.");
+          alert("Se produjo un error al enviar el mensaje!.");
           console.error(error.text);
         }
       );
@@ -38,15 +32,15 @@ console.log("Form ref:", form.current);
       <h2>CONTACTANOS</h2>
       <form ref={form} className="contact-form" onSubmit={sendEmail}>
         <label>
-          Nombre
+          Nombre:
           <input type="text" name="user_name" placeholder="Nombre Completo" required />
         </label>
         <label>
-          Correo Electronico
+          Correo Electronico:
           <input type="email" name="user_email" placeholder="ejemplo@correo.com" required />
         </label>
         <label>
-          Mensaje
+          Mensaje:
           <textarea  name="message" rows="5" placeholder="Escribe un mensaje..." required />
         </label>
         <button type="submit">Enviar Mensaje</button>
