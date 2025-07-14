@@ -7,12 +7,10 @@ function Hero() {
   <div className="overlay">
     <h1>LA GALERIA </h1>
     <p>De tus mejores recuerdos.</p>
-    <a href="#gallery" className="cta-button">CONTRATANOS</a>
+    <a href="#CONTACTO" className="cta-button">CONTRATANOS</a>
   </div>
-</section>
-
-
+  </section>
   )
 }
 
-export default Hero
+export default Hero;
